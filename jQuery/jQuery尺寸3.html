@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery尺寸3</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "height of div" + $("div").height() + "<br>" +
+                    "width of div " + $("div").width() + "<br>" +
+                    "innerHeight of div " + $("div").innerHeight() + "<br>" +
+                    "innerWidth of div" + $("div").innerWidth() + "<br>" +
+                    "outerHeight of div " + $("div").outerHeight(true) + "<br>" +
+                    "outerWidth of div " + $("div").outerWidth(true);
+                $("div").html(txt);
+            });
+        });
+    </script>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid pink;
+            margin: 5px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button>获取div宽高</button>
+</body>
+
+</html>

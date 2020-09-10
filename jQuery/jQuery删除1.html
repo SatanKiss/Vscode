@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery删除1</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").remove();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>111</p>
+        <p>222</p>
+    </div>
+    <button>删除div</button>
+</body>
+
+</html>

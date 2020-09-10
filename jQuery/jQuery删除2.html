@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery删除2</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").empty();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="border: 1px solid red;height: 500px;width: 300px;">
+        <p>111</p>
+        <p>222</p>
+        <p>333</p>
+    </div>
+    <button>清空div内部元素</button>
+</body>
+
+</html>

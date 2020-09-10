@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryChaining1</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").css("color", "red").slideUp(3000).slideDown(3000);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>jQuery 乐趣十足</p>
+    <button>点击这里</button>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryCss类2</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#d1").addClass("important blue");
+            });
+        });
+    </script>
+    <style>
+        div {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="d1">this is some text</span><br>
+    <span id="d2">this is another text</span>
+    <br>
+    <button>向第一个span元素添加类</button>
+</body>
+
+</html>

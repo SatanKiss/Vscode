@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery设置4</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("a").attr({
+                    "href": "https://ipv6.baidu.com",
+                    "title": "百度一下，你就知道"
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p><a href="#">baidu</a></p>
+    <button>改变href和title值</button>
+    <p>鼠标指针移动到链接或点击链接即可查看</p>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery获取2</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert("Value :" + $("#test").val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>获取Value</p>
+    <p>姓名：</p><input type="text" name="" id="test" value="米老鼠">
+    <button>显示值</button>
+</body>
+
+</html>

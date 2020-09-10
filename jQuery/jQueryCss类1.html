@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryCss类1</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1,h2,p").addClass("blue");
+                $("div").addClass("important");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <h1>标题1</h1>
+    <h2>标题2</h2>
+    <p>this is a paragraph</p>
+    <p>this is another paragraph</p>
+    <div>这是非常重要的文本</div>
+    <br />
+    <button>向元素添加类</button>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#test1").text("Hello World");
+            });
+            $("#b2").click(function () {
+                $("#test2").html("<b>hello world</b>")
+            });
+            $("#b3").click(function () {
+                $("#test3").val("Dolly Duck");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>设置内容——text()&&html()&&val()</h1>
+    <p id="test1">this is a paragraph</p>
+    <p id="test2">this is another paragraph</p>
+    <p>Input field: <input type="text" name="" id="test3" value="Mickey Mouse"></p>
+    <button id="b1">设置文本</button>
+    <button id="b2">设置Html</button>
+    <button id="b3">设置值</button>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery动画4</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    height: 'toggle' //收起放下
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>...</button>
+    <div style="background-color: black;height: 100px;width: 100px;position: absolute;"></div>
+</body>
+
+</html>

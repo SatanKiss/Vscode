@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery名称冲突</title>
+    <script src="jquery-3.5.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.noConflict();
+        jQuery(document).ready(function () {
+            jQuery("button").click(function () {
+                jQuery("p").text("jQuery 仍在运行");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>this is a paragraph</p>
+    <button>test jQuery</button>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery添加3</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        function appendText() {
+            //以jQuery创建元素
+            var txt = $("<p></p>").text("Text.");
+            //元素追加
+            $("body").append(txt);
+        }
+    </script>
+</head>
+
+<body>
+    <p>this is a paragraph</p>
+    <button onclick="appendText()">追加文本</button>
+</body>
+
+</html>

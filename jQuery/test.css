@@ -1,0 +1,40 @@
+div {
+    width: 80px;
+    height: 80px;
+    display: none;
+}
+
+#div1 {
+    background-color: aqua;
+}
+
+#div2 {
+    background-color: blue;
+}
+
+#div3 {
+    background-color: coral;
+}
+
+div.panel,
+p.flip {
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px red;
+    background-color: pink;
+}
+
+div.panel {
+    height: 120px;
+    display: none;
+}
+
+.important {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.blue {
+    color: blue;
+}

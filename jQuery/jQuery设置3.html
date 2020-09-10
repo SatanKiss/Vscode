@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery设置3</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("a").attr("href", "https://ipv6.baidu.com");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p><a href="#">ipv6.baidu.com</a></p>
+    <button>改变href值</button>
+    <p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的href值。</p>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryCss()1</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert("P1 Background color =" + $("#p1").css("background-color"));
+                alert("P2 Background color =" + $("#p2").css("background-color"));
+                alert("P3 Background color =" + $("#p3").css("background-color"));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>this is title</h2>
+    <p id="p1" style="background-color: #ff0000;">this is a paragraph</p>
+    <p id="p2" style="background-color: #00ff00;">this is a paragraph</p>
+    <p id="p3" style="background-color: #0000ff;">this is a paragraph</p>
+    <button>返回P元素的背景色</button>
+</body>
+
+</html>

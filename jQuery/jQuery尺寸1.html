@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery尺寸1</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "Width of div " + $("div").width() + "<br />" + "Height of div " + $("div")
+                    .height();
+                $("div").html(txt);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="height: 300px;width: 100px;margin: 3px;background-color: aqua;"></div>
+    <button>显示div的尺寸</button>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery添加2</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").prepend("<b>hello world</b>");
+            });
+            $("#btn2").click(function () {
+                $("ol").prepend("<li>hello world</li>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>prepend()方法</h1>
+    <p>this is a paragraph</p>
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+    <button id="btn1">添加文本</button>
+    <button id="btn2">添加列表项</button>
+</body>
+
+</html>

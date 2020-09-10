@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryStop1</title>
+    <script src="jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="test.css">
+    <script>
+        $(document).ready(function () {
+            $(".flip").click(function () {
+                $(".panel").slideDown(3000);
+            });
+            $("button").click(function () {
+                $(".panel").stop();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>停止滑动</button>
+    <p class="flip">点击这里，向下滑动面板</p>
+    <div class="panel">Hello World</div>
+</body>
+
+</html>

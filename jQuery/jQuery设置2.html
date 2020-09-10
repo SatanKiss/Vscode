@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery设置2</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text(function (i, origText) {
+                    return "Old text :" + origText + "New text:Hello World!(index:" + i + ")";
+                });
+            });
+            $("#btn2").click(function () {
+                $("#test2").html(function (i, origText) {
+                    return "Old html:" + origText + "new html:hello <b>World</b>(index:" + i +
+                        ")";
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="test1">这是<b>粗体</b>文本</p>
+    <p id="test2">这是另一段<b>粗体</b>文本</p>
+    <button id="btn1">显示新/旧文本</button>
+    <button id="btn2">显示新/旧HTML</button>
+</body>
+
+</html>

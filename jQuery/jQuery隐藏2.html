@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.5.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ex .hide").click(function () {
+                $(this).parents(".ex").hide("slow");
+            });
+        });
+    </script>
+    <style>
+        div.ex {
+            background-color: aqua;
+            padding: 7px;
+            border: 1px solid pink;
+        }
+    </style>
+    <title>jQuery隐藏2</title>
+</head>
+
+<body>
+    <h3>中国办事处</h3>
+    <div class="ex">
+        <button class="hide" type="button">隐藏</button>
+        <p>联系人：张先生 <br />
+            北三环中路100号<br />
+            北京<br />
+        </p>
+    </div>
+    <h3>美国办事处</h3>
+    <div class="ex">
+        <button class="hide" type="button">隐藏</button>
+        <p>
+            联系人：David <br />
+            第五大街200号 <br />
+            纽约
+        </p>
+    </div>
+</body>
+
+</html>

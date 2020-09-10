@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery fadeTo</title>
+    <link rel="stylesheet" href="test.css" type="text/css">
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeTo("slow", 0.15);
+                $("#div2").fadeTo("slow", 0.4);
+                $("#div3").fadeTo("slow", 0.7);
+            });
+        });
+    </script>
+    <style>
+        div {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <p>fadeTo两个参数,数字0-1,表示透明度,数字越小,透明度越高</p>
+    <p>演示带有不同参数的fadeTo()方法</p>
+    <button>点击这里,使矩形淡出</button>
+    <br /><br />
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+</body>
+
+</html>

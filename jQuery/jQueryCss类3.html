@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryCss类3</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1,h2,p").removeClass("blue");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 class="blue">title 1</h1>
+    <h2 class="blue">title 2</h2>
+    <p class="blue">this is a paragraph</p>
+    <p>this is another paragraph</p>
+    <button>从元素上删除类</button>
+</body>
+
+</html>

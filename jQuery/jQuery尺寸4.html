@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery尺寸4</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "Document width/height:" + $(document).width();
+                txt += "x" + $(document).height() + "\n";
+                txt += "Window width/height:" + $(window).width();
+                txt += "x" + $(window).height();
+                alert(txt);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>显示文档和窗口的尺寸</button>
+</body>
+
+</html>

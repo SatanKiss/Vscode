@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery添加5</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        function afterText() {
+            //以HTML创建元素
+            var txt1 = "<b>i</b>";
+            //通过jQuery创建元素
+            var txt2 = $("<i></i>").text("love");
+            //通过dom创建元素
+            var txt3 = document.createElement("big");
+            txt3.innerHTML = "jQuery!";
+            //after方法
+            $("img").after(txt1, txt2, txt3);
+        }
+    </script>
+</head>
+
+<body>
+    <img src="eg_w3school.gif" alt="Logo">
+    <br /><br />
+    <button onclick="afterText()">在图片后面添加文本</button>
+</body>
+
+</html>

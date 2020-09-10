@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery尺寸2</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "height of div " + $("div").height() + "<br>" + "width of div " + $("div")
+                    .width() + "<br>" + "innerHeight of div" + $("div").innerHeight() + "<br>" +
+                    "innerWidth of div " + $("div").innerWidth();
+                $("div").html(txt);
+            })
+        })
+    </script>
+    <style>
+        div {
+            width: 300px;
+            height: 400px;
+            display: block;
+            background-color: burlywood;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button>获取div宽高</button>
+    <p>innerHeight()方法显示包含内边距在内的高度 </p>
+</body>
+
+</html>

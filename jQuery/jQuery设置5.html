@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery设置5</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("a").attr("href", function (i, origValue) {
+                    return origValue + "/jquery";
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p><a href="https://ipv6.baidu.com">baidu.com</a></p>
+    <button>change value of href</button>
+</body>
+
+</html>
