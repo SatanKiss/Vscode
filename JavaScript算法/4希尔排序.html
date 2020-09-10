@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>希尔排序</title>
+</head>
+
+<body>
+    <img src="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_shellsort_anim.gif" alt="">
+</body>
+
+</html>
+<script>
+    function shellSort(arr) {
+        var len = arr.length,
+            temp,
+            gap = 1;
+        while (gap < len / 3) { //动态定义间隔序列
+            gap = gap * 3 + 1;
+        }
+        for (gap; gap > 0; gap = Math.floor(gap / 3)) {
+            for (let i = gap; i < len; i++) {
+                temp = arr[i];
+                for (let j = i - gap; j >= 0 && arr[j] > temp; j -= gap) {
+                    arr[j + gap] = arr[j];
+
+                }
+                arr[j + gap] = temp;
+            }
+
+        }
+        return arr;
+    }
+</script>

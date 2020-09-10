@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择排序</title>
+</head>
+
+<body>
+    <p>一张图看懂选择排序</p>
+    <img src="https://www.runoob.com/wp-content/uploads/2019/03/selectionSort.gif" alt="">
+</body>
+
+</html>
+<script>
+    function selectionSort(arr) {
+        var len = arr.length;
+        var minIndex, temp;
+        for (let i = 0; i < len - 1; i++) {
+            minIndex = i;
+            for (let j = i + 1; j < len; j++) {
+                if (arr[j] < arr[minIndex]) { //寻找最小的数
+                    minIndex = j; //将最小数的索引保存
+                }
+
+            }
+            temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+        return arr;
+    }
+</script>

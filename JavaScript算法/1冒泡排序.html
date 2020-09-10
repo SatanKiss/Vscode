@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+</head>
+
+<body>
+    <p>一张图看懂冒泡排序</p>
+    <img src="https://www.runoob.com/wp-content/uploads/2019/03/bubbleSort.gif" alt="">
+</body>
+
+</html>
+<script>
+    function bubbleSort(arr) {
+        var len = arr.length;
+        for (let i = 0; i < len - 1; i++) {
+            for (let j = 0; j < len - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) { //相邻元素两两对比
+                    var temp = arr[j + 1]; //元素交换
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+</script>

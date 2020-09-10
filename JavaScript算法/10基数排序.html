@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基数排序</title>
+</head>
+
+<body>
+    <img src="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" alt="">
+</body>
+
+</html>
+<script>
+    //LSD Radix Sort 
+    var counter = [];
+
+    function radixSort(arr, maxDigit) {
+        var mod = 10;
+        var dev = 1;
+        for (let i = 0; i < maxDigit; i++, dev *= 10, mod *= 10) {
+            for (let j = 0; j < arr.length; j++) {
+                var bucket = parseInt((arr[j] % mod) / dev);
+                if (counter[bucket] == null) {
+                    counter[bucket] = [];
+                }
+                counter[bucket].push(arr[j]);
+
+            }
+            var pos = 0;
+            for (let j = 0; j < counter.length; j++) {
+                var value = null;
+                if (counter[j] != null) {
+                    while ((value = counter[j].shift()) != null) {
+                        arr[pos++] = value;
+                    }
+                }
+
+            }
+
+        }
+        return arr;
+    }
+</script>
