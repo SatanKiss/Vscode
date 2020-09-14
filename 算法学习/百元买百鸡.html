@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百元买百鸡</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    //母鸡5元/只 公鸡3元/只 小鸡1元/3只
+    //要求百元买百鸡
+    //以数量为循环
+    // $(function () {
+    //     for (var x = 0; x < 20; x++) {
+    //         for (var y = 0; y < 100 - x; y++) {
+    //             var z = 100 - x - y;
+    //             var count = (x + y + z == 100);
+    //             var price = (5 * x + 3 * y + z / 3 == 100);
+    //             if (count && price) {
+    //                 console.log(x, y, z);
+    //             }
+    //         }
+    //     }
+    // })
+
+    function fun() {
+        for (var x = 0; x < 20; x++) {
+            for (var y = 0; y < 33; y++) {
+                var z = 100 - x - y;
+                var count = (x + y + z == 100);
+                var price = (5 * x + 3 * y + z / 3 == 100);
+                if (count && price) {
+                    console.log(x, y, z);
+                }
+            }
+
+        }
+    }
+    fun();
+
+    function fun1() {
+        for (let x = 0; x < 100; x += 5) {
+            for (let y = 0; y < 100; y += 3) {
+                var z = 100 - x - y;
+                var _x = x / 5;
+                var _y = y / 3;
+                var _z = z * 3;
+                if ((_x + _y + _z == 100) && (x + y + z == 100)) {
+                    console.log(_x+","+_y+","+_z);
+                }
+            }
+
+        }
+    }
+</script>

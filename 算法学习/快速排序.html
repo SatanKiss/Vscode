@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速排序</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //arr = 3,9,6,4,5
+    function kuaisu(arr, left = 0, right = arr.length - 1) {
+        console.log(arr);
+        if (left >= right) {
+            return;
+        }
+        let i = left;
+        let j = right;
+        const temp = arr[j];
+        while (i < j) {
+            while (i < j && arr[i] <= temp) {
+                i++;
+            }
+            arr[j] = arr[i];
+            console.log(arr);
+            while (i < j && arr[j] >= temp) {
+                j--;
+            }
+            arr[i] = arr[j];
+            console.log(arr);
+        }
+        arr[j] = temp;
+        console.log(arr);
+        kuaisu(arr, left, j - 1);
+        kuaisu(arr, j + 1, left);
+    }
+</script>
