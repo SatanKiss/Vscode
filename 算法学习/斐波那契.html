@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斐波那契</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //递归
+    function fbnq1(n) {
+        if (n <= 2) {
+            return 1;
+        } else {
+            return fbnq1(n - 1) + fbnq1(n - 2);
+        }
+    }
+    //尾调用优化
+    function fbnq2(n, res1 = 1, res2 = 1) {
+        if (n <= 2) {
+            return res2;
+        } else {
+            return fbnq2(n - 1, res2, res1 + res2);
+        }
+    }
+    //迭代
+    function fbnq3(n) {
+        var res1 = 1, res2 = 1, sum = res2;
+        for (let i = 0; i < n; i++) {
+            sum = res1 + res2;
+            res1 = res2;
+            res2 = sum;
+
+        }
+        return sum;
+    }
+    //闭包
+    const fbnq4 = function () {
+        var mem = [0, 1];
+        var f = function (n) {
+            var res = mem[n];
+            if (tepeof res !== 'number') {
+                mem[n] = f(n - 1) + f(n - 2);
+                res = mem[n];
+            }
+            return res
+        }
+
+        return f;
+    }
+</script>

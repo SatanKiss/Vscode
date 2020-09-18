@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script src="/jQuery/jquery-3.5.1.js"></script>
+<script>
+    function initChessBoard(y, x) {
+            leiqu.innerHTML = "";
+            for (let i = 0; i < y; i++) {
+                leiqu.appendChild(addTr(i, x));
+            }
+        }
+        function addTr(h, x) {
+            var tr = document.createElement("tr");
+            for (let j = 0; j < x; j++) {
+                tr.appendChild(addTd(h, j));
+            }
+            return tr;
+        }
+        function addTd(h, l) {
+            var td = document.createElement("td");
+            td.setAttribute("x", h);
+            td.setAttribute("y", l);
+            td.setAttribute("arroundLei", 0);
+            td.setAttribute("isLei", 0);
+            td.setAttribute("isFlag", 0);
+            td.setAttribute("isShow", 0);
+            td.onmousedown = saoLei;
+            td.onmouseup = onMouseUp;
+            td.onmouseout = onMouseOut;
+            return td;
+        }
+</script>
